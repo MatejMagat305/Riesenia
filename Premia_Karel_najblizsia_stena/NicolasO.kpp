@@ -1,0 +1,52 @@
+// najblizsia stena
+
+prikaz kstene
+ ak nie je stena tak
+  krok
+  kstene
+  ak je stena tak
+   ak je znacka tak
+    vlavo
+    vlavo
+    odznac
+   *ak
+  *ak
+  krok
+  krok
+ inak oznac
+
+ *ak
+
+
+*prikaz
+
+prikaz kBlizsejStene
+ vpravo
+ ak nie je stena tak
+  oznac
+  vlavo
+  vlavo
+  kstene
+  ak je stena tak
+   vlavo
+   vlavo
+   kym nie je znacka rob
+    krok
+   *kym
+   vlavo
+   vlavo
+   odznac
+  inak
+   vlavo
+   vlavo
+   kym nie je znacka rob
+    krok
+   *kym
+   odznac
+  *ak
+ *ak
+
+
+*prikaz
+
+kBlizsejStene

@@ -1,0 +1,50 @@
+// Robot Karel k najblizsej stene - premia
+
+prikaz zacuvaj
+  vlavo vlavo krok vlavo vlavo
+*prikaz
+
+prikaz vypocitajVzdialenost
+  ak nie je stena tak
+    poloz
+    krok
+    vypocitajVzdialenost
+    kym je tehla rob
+      zober
+      zacuvaj
+      poloz
+      krok
+    *kym
+    zacuvaj
+  *ak
+*prikaz
+
+prikaz vycistiOkolie
+  opakuj 4 krat
+    kym je tehla rob
+      zober
+    *kym
+    vpravo
+  *opakuj
+*prikaz
+
+prikaz najdiNajblizsiu
+  ak je tehla tak
+    zober
+    vpravo
+    najdiNajblizsiu
+  inak
+    vycistiOkolie
+  *ak
+*prikaz
+
+prikaz vypocitajVsetkyVzdialenosti
+  opakuj 4 krat
+    vypocitajVzdialenost
+    vpravo
+  *opakuj
+*prikaz
+
+vypocitajVsetkyVzdialenosti
+najdiNajblizsiu
+

@@ -1,0 +1,43 @@
+
+prikaz meraj
+       ak nie je stena tak
+          krok
+          meraj
+          krok
+          krok
+       inak
+          vpravo
+          vpravo
+       *ak
+*prikaz
+
+prikaz vrat1
+       kym nie je znacka rob
+           krok
+       *kym
+*prikaz
+
+prikaz vrat2
+       kym nie je znacka rob
+           krok
+       *kym
+       vlavo
+       vlavo
+*prikaz
+
+
+oznac
+vpravo
+ak nie je stena tak
+   meraj
+   ak nie je stena tak
+      vlavo
+      vlavo
+      vrat1
+   inak
+       vlavo
+       vlavo
+       vrat2
+   *ak
+*ak
+odznac

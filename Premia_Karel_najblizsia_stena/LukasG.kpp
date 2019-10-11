@@ -1,0 +1,61 @@
+prikaz blizsie
+  opakuj 4 krat // zmera si vzdialenosti ku vsetkym 4 stenam
+    zarazka
+    zmeraj
+    vpravo
+  *opakuj
+  zisti // zisti, ktora bola najblizsie (najmensia kopa)
+*prikaz
+
+prikaz zisti
+  ak je tehla tak
+    zober
+    ak nie je tehla tak // v tomto smere uz nie je tehla, cize najblizsia stena
+      vycisti
+    inak
+      vpravo
+      zisti
+    *ak
+  *ak
+*prikaz
+
+prikaz vycisti // vycisti tehly okolo seba
+  ak je tehla tak
+    zober
+    vycisti
+  inak
+    vpravo
+    ak je tehla tak
+      vycisti
+    *ak
+  *ak
+*prikaz
+
+prikaz zarazka // postavi za seba zarazku, aby vedel, odkial vystartoval
+  vlavo
+  vlavo
+  poloz
+  vlavo
+  vlavo
+*prikaz
+
+prikaz zmeraj // zmera vzdialenost k aktualnej stene postavenim kopy tehal
+   ak nie je stena tak
+     krok
+     zmeraj
+     poloz
+   inak
+     vlavo
+     vlavo
+     kym nie je tehla rob  // tu by to chcelo "kym nie je tehla alebo stena rob"
+       krok
+     *kym
+     zober
+     vlavo
+     vlavo
+   *ak
+*prikaz
+
+blizsie // miestnost musi mat dostatocnu vysku na postavenie pomocnych tehal
+        // a zaroven program nefunguje, ak Karol stoji na zaciatku pri stene
+        // kvoli tomu, ze tento jazyk asi nepozna alebo... (podmienka v zmeraj)

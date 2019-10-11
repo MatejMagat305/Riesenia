@@ -1,0 +1,168 @@
+//premia - k najblizsej stene  (zo 4)
+
+prikaz otoc
+       vlavo
+       vlavo
+*prikaz
+
+prikaz vzad
+       otoc
+       krok
+       otoc
+*prikaz
+
+prikaz vpravo
+       opakuj 3 krat vlavo *opakuj
+*prikaz
+
+prikaz poStenu
+       ak nie je stena tak
+          poloz
+          krok
+          poStenu
+          vzad
+       *ak
+*prikaz
+
+prikaz pozbierajPridaj
+       ak je tehla tak
+          kym je tehla rob krok *kym
+          vzad
+          zober
+          otoc
+          kym nie je znacka rob krok *kym
+          vzad
+          poloz
+          krok
+          otoc
+          pozbierajPridaj
+       *ak
+*prikaz
+
+prikaz pozbierajZober
+       ak je tehla tak
+          kym je tehla rob krok *kym
+          vzad
+          zober
+          otoc
+          kym nie je znacka rob krok *kym
+          vzad
+          zober
+          krok
+          otoc
+          pozbierajZober
+       *ak
+*prikaz
+
+prikaz oznacZaciatok
+       krok
+       otoc
+       poloz
+       krok
+       otoc
+       oznac
+*prikaz
+
+//////
+
+prikaz porovnaj
+       //vpred - vzad
+       oznacZaciatok
+       poStenu
+       otoc
+       poStenu
+       otoc
+       pozbierajPridaj
+       otoc
+       pozbierajZober
+       otoc //na pokladane
+       ak nie je stena tak
+          krok
+          otoc
+          ak je tehla tak
+             zober //1
+             ak je tehla tak
+                kym je tehla rob zober *kym
+                krok
+                odznac
+             inak
+                 //rovnake
+                 krok
+                 odznac
+             *ak
+          inak
+             krok
+             odznac
+             otoc
+          *ak
+       inak
+           odznac
+       *ak
+
+*prikaz
+
+
+prikaz porovnaj2
+       //pred - vpravo
+       oznacZaciatok
+       poStenu
+       vlavo
+       poStenu
+       vpravo
+       pozbierajPridaj
+       vlavo
+       pozbierajZober
+       vpravo //na pokladane
+       ak nie je stena tak
+          krok
+          otoc
+          ak je tehla tak
+             zober //1
+             ak je tehla tak
+                kym je tehla rob zober *kym
+                krok
+                otoc
+                odznac
+                vlavo
+             inak
+                 //rovnake
+                 krok
+                 odznac
+                 otoc
+             *ak
+          inak
+             krok
+             odznac
+             otoc
+          *ak
+       inak
+           odznac
+       *ak
+*prikaz
+
+/////
+
+prikaz kratsiKoniec
+       opakuj 3 krat
+          ak nie je stena tak vlavo *ak
+       *opakuj
+       ak nie je stena tak
+          porovnaj
+          poloz
+          vlavo
+          porovnaj
+          vlavo
+          ak nie je tehla tak
+             otoc
+             zober
+          inak
+              zober
+              vpravo
+          *ak
+          porovnaj2
+       *ak
+*prikaz
+
+kratsiKoniec
+
+

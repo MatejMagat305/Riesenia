@@ -1,0 +1,118 @@
+//premia - k najblizsej stene  (z 2)
+
+prikaz otoc
+       vlavo
+       vlavo
+*prikaz
+
+prikaz vzad
+       otoc
+       krok
+       otoc
+*prikaz
+
+prikaz poStenu
+       ak nie je stena tak
+          poloz
+          krok
+          poStenu
+          vzad
+       *ak
+*prikaz
+
+prikaz pozbieraj
+       ak je tehla tak
+          kym je tehla rob krok *kym
+          vzad
+          zober
+          otoc
+          kym nie je znacka rob krok *kym
+          vzad
+          poloz
+          krok
+          otoc
+          pozbieraj
+       *ak
+*prikaz
+
+prikaz pozbieraj2
+       ak je tehla tak
+          kym je tehla rob krok *kym
+          vzad
+          zober
+          otoc
+           kym nie je znacka rob krok *kym
+           vzad
+           zober
+           krok
+           otoc
+           pozbieraj2
+       *ak
+*prikaz
+
+prikaz oznacZaciatok
+       krok
+       otoc
+       poloz
+       krok
+       otoc
+       oznac
+*prikaz
+
+prikaz porovnaj
+       ak je stena tak
+          otoc
+          oznacZaciatok
+          otoc
+       inak
+           oznacZaciatok
+       *ak
+       //
+       vlavo
+       poStenu
+       otoc
+       poStenu
+       otoc
+       ak je stena tak
+          ak je znacka tak
+             otoc
+          *ak
+       inak
+           pozbieraj
+           otoc
+       *ak
+       ak je stena tak
+          ak je znacka tak
+             otoc
+          *ak
+       inak
+           pozbieraj2
+           otoc
+       *ak
+       ak nie je stena tak
+          krok
+          otoc
+          ak je tehla tak
+             zober //1
+             ak je tehla tak
+                kym je tehla rob zober *kym
+                krok
+                odznac
+             inak
+                 //rovnake
+                 krok
+                 odznac
+             *ak
+          inak
+             krok
+             odznac
+             otoc
+          *ak
+       inak
+           odznac
+       *ak
+*prikaz
+
+porovnaj
+
+

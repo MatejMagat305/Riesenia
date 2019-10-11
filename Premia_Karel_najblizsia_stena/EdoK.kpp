@@ -1,0 +1,105 @@
+ {uloha:
+ obot Karel má po lavej a pravej ruke steny
+ a jeho úlohou jeho je otocit sa k bližšej stene.
+ V prípade, že sú rovnako vzdialené,
+ tak k lubovolnej z nich. [1 bod] }
+ 
+{myslienka: idem do lava a pokladam pod seba tehly, ak sa
+budem vynarat z rekuzrie tak ich zratam  a
+postavim pod seba tolko
+tehal kolkokrat som sa vnoril.
+potom idem do prava a pri vynarani odoberiem tehly,
+ak uz nie su tehly tak vlavo inak vpravo   }
+prikaz otoc
+       vlavo
+       vlavo
+*prikaz
+
+prikaz krokVzad
+      otoc
+      krok
+      otoc
+*prikaz
+
+prikaz polozTehluPodSeba
+     krokVzad
+     poloz
+     krok
+*prikaz
+
+prikaz zdvyhniTehlu
+     krokVzad
+     zober
+     krok
+*prikaz
+
+prikaz zdvyhniTehluPodSebou
+    ak je stena tak
+      zdvyhniTehlu
+    *ak
+      {mozno mam za sebou stenu}
+      otoc
+      zdvyhniTehlu
+      otoc
+*prikaz
+
+
+prikaz pozriStranu
+   ak nie je stena tak
+      polozTehluPodSeba
+      krok
+      pozriStranu
+   inak
+      otoc
+   *ak
+*prikaz
+
+
+prikaz pozbierajTehlyAPostavVezu
+      zdvyhniTehluPodSebou
+
+      ak je tehla tak
+          krok
+          pozbierajTehlyAPostavVezu
+          polozTehluPodSeba
+      *ak
+*prikaz
+
+prikaz pozbierajTehlyAZnicVezu
+      zdvyhniTehluPodSebou
+      ak je tehla tak
+          krok
+          pozbierajTehlyAZnicVezu
+          zdvyhniTehluPodSebou
+      *ak
+*prikaz
+
+{skontrolujem ci je podomnou tehla a vyhodnotim kratsiu stranu}
+prikaz  kontrola
+    krokVzad
+    ak je tehla tak
+        kym je tehla rob
+            zober
+        *kym
+        krok
+        otoc
+    inak
+       krok
+    *ak
+*prikaz
+
+
+prikaz init
+    vlavo
+    pozriStranu
+    pozbierajTehlyAPostavVezu
+    {aktualne sa pozeram do prava}
+    pozriStranu
+    pozbierajTehlyAZnicVezu
+    {aktualne sa pozeram do lava}
+    {kontrola ci je podo mnou tehle}
+    kontrola
+
+*prikaz
+
+init

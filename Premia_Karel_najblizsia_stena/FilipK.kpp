@@ -1,0 +1,140 @@
+prikaz otoc
+       vlavo
+       vlavo
+*prikaz
+{prejde k jednej stene potom sa otoci
+a robi vzdy 2 kroky ak ma po skonceni
+pred sebou stenu tak druha vzdialenost je
+kratsia alebo rovnaka}
+prikaz porovnaj2za_pom
+       ak nie je stena tak
+       krok
+       porovnaj2za_pom
+       krok
+       krok
+       inak
+       otoc
+       *ak
+*prikaz
+
+prikaz porovnaj2za
+       oznac
+       porovnaj2za_pom
+       ak je stena tak
+       otoc
+           kym nie je znacka rob
+           krok
+           *kym
+       inak
+       otoc
+           kym nie je znacka rob
+           krok
+           *kym
+       otoc
+       *ak
+       poloz
+       otoc
+       odznac
+*prikaz
+
+{porovna 2 vzdialenosti vedla seba
+dlhsiu oznaci tehlou, ide rekurzivne po
+diagonale aby sa vedel vratit}
+prikaz porovnaj2vedla
+        ak nie je stena tak
+        vlavo
+             ak nie je stena  tak
+             krok
+             vpravo
+             krok
+             porovnaj2vedla
+                      ak je znacka tak
+                       odznac
+                       krok
+                       vlavo
+                       krok
+                       vpravo
+                       oznac
+                      inak
+                       krok
+                       vlavo
+                       krok
+                       vpravo
+                      *ak
+             inak
+             vlavo
+             *ak
+        inak
+            otoc
+            oznac
+        *ak
+*prikaz
+
+porovnaj2vedla
+         ak je znacka tak
+         vpravo
+         poloz
+         odznac
+         otoc
+         inak
+         otoc
+         poloz
+         odznac
+         otoc
+         *ak
+{zatial sa porovnali 2 vzdialenosti
+dlhsia je oznacena tehlou robot je natoceny na
+porovnanie dalsich 2 susednych}
+porovnaj2vedla
+         ak je znacka tak
+         vpravo
+         poloz
+         odznac
+         inak
+         otoc
+         poloz
+         odznac
+         *ak
+{porovnali sa dalsie 2 dlhsia je oznacena tehlou
+robot je otoceny k tehle ostava porovnat 2
+ale tie uz mozu byt aj za sebou}
+kym je tehla rob
+    vpravo
+*kym
+{najdem jedno neoznacene a idem zistit
+ci su za sebou  alebo vedla podla toho
+zavolam posledne porovnanie}
+otoc
+   ak nie je tehla tak
+   porovnaj2za
+   inak
+   otoc
+   vpravo
+   porovnaj2vedla
+         ak je znacka tak
+         vpravo
+         poloz
+         odznac
+         vlavo
+         inak
+         otoc
+         poloz
+         odznac
+         otoc
+         *ak
+   *ak
+
+{teraz mam 3 smery oznacene tehlami som na
+spravnom miestne a nemam tusenie kam som
+otoceny tak najdem smer bez tehly a potom
+este pozberam ostatne}
+kym je tehla rob
+    vlavo
+*kym
+vlavo
+zober
+vlavo
+zober
+vlavo
+zober
+vlavo
