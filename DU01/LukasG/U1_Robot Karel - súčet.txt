@@ -1,0 +1,14 @@
+prikaz scitaj
+  ak je tehla tak // nabere tehly zo vsetkych kop
+    zober
+    scitaj
+    poloz // pouklada nakopu vsetky nabrate (scitane) tehly
+  inak
+    vpravo 
+    ak je tehla tak // ak narazi na prazdnu (ta prva) kopu, zacne sa vynarat
+      scitaj
+    *ak
+  *ak
+*prikaz
+
+scitaj

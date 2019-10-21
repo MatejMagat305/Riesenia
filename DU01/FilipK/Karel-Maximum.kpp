@@ -1,0 +1,42 @@
+{karel ide tehlu po tehle v prvom
+stlpci a pre kazdu polozi tehlu do tretieho
+ked uz nie je tehla tak sa presunie do
+druheho stlpca a pokracuje v tom
+ak uz nie je tehla tak prvy bol vacsi a je
+koniec inak doklada tehli do konca tohto
+}
+Prikaz otoc
+         vlavo
+         vlavo
+  *Prikaz
+
+prikaz maximum
+       kym je tehla rob
+       krok
+       vpravo
+       krok
+       poloz
+       otoc
+       krok
+       vpravo
+       *kym
+       vpravo
+       krok
+       vlavo
+       kym je tehla rob
+       krok
+       vpravo
+       poloz
+       vlavo
+       krok
+       *kym
+       vpravo
+       krok
+       vpravo
+       kym je tehla rob
+       krok
+       *kym
+       krok
+       otoc
+*prikaz
+maximum

@@ -1,0 +1,54 @@
+{aby som sa vratil na povodne miesto tak
+pouzivam rekurentne volania aby som
+sa pre kazdy krok vratil. metodou rovno sa
+dostanem ku kraju potom sa zacne volat okraj
+teda karol ide kolecko popri stene ak pride do
+rohu polozi tehlu ak uz narazi na tehlu
+tak sa zacne vynarat lebo uz ma vsetky rohy}
+
+Prikaz otoc
+         vlavo
+         vlavo
+  *Prikaz
+prikaz okraj
+       ak nie je tehla tak
+           ak je stena tak
+          otoc
+          krok
+          otoc
+          poloz
+          krok
+          vlavo
+          inak
+          krok
+          *ak
+          okraj
+          ak je stena tak
+          vpravo
+          inak
+          krok
+          *ak
+        inak
+            otoc
+       *ak
+*prikaz
+
+prikaz rovno
+       ak je stena tak
+       vlavo
+       okraj
+       vpravo
+       inak
+       krok
+       rovno
+       krok
+       *ak
+*prikaz
+
+
+prikaz rozkovy
+      rovno
+      otoc
+*prikaz
+
+rozkovy

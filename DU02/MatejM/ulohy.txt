@@ -1,0 +1,105 @@
+
+package main
+
+import "golang.org/x/tour/pic"
+
+func Pic(dx, dy int) [][]uint8 {
+	vysl := make([][]uint8,dy)
+	
+	for i:=0;i<dy;i++{
+		v:=make([]uint8,dx)
+		for j:=0;j<dx;j++{
+			v[j]=uint8(i*j/2)
+		}
+		vysl[i]=v
+	}
+	return vysl
+
+}
+
+func main() {
+	pic.Show(Pic)
+}
+
+package main
+
+import (
+	"golang.org/x/tour/wc"
+	"strings"
+)
+
+func WordCount(s string) map[string]int {
+	vysl := make(map[string]int)
+	pole := strings.Split(s, " ")
+	for i := 0; i < len(pole); i++ {
+		v, ok := vysl[pole[i]]
+		if ok {
+			vysl[pole[i]] = (v + 1)
+		} else {
+			vysl[pole[i]] = 1
+		}
+	}
+	return vysl
+}
+
+func main() {
+	wc.Test(WordCount)
+}
+
+
+package main
+
+import "fmt"
+
+// fibonacci is a function that returns
+// a function that returns an int.
+func fibonacci() func() int {
+	a := 0
+	b := 1
+	return func() int {
+		vysl := a
+		a = b
+		b = b + vysl
+		return vysl
+	}
+}
+
+func main() {
+	f := fibonacci()
+	for i := 0; i < 10; i++ {
+		fmt.Println(f())
+	}
+}
+
+
+
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+func Sqrt(x float64) float64 {
+	z := x/2
+
+	for i := 0; ; i++ {
+		z2 := z
+		z -= (z*z - x) / (2 * z)
+		if math.Abs(z2-z) < 0.00000001 {
+			fmt.Print("i=",i,": ")
+			return z
+		}
+	}
+
+	return z
+}
+
+func main() {
+	fmt.Print(Sqrt(10000)," vs ", math.Sqrt(10000),"    ")
+	fmt.Println(Sqrt(100)," vs ", math.Sqrt(100))
+	fmt.Print(Sqrt(80)," vs ", math.Sqrt(80),"   ")
+	fmt.Println(Sqrt(81)," vs ", math.Sqrt(81))
+	fmt.Print(Sqrt(25)," vs ", math.Sqrt(25),"  ")
+	fmt.Println(Sqrt(24)," vs ", math.Sqrt(24),"\n")
+}

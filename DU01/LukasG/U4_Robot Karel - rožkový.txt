@@ -1,0 +1,37 @@
+prikaz rohy
+  ak je stena tak // zistujeme, ci sme v rohu
+    vlavo
+    ak je stena tak // v rohu sme vtedy, ak je stena aj po nasej lavici
+      dozadu
+      poloz // polozime tehlu do rohu
+      vpravo // otocime sa 
+      vpravo
+      rohy // pokracujeme dalej
+      vlavo // pri vynarani sa vraciame po prejdenej ceste
+      vlavo
+      krok
+      vpravo
+    inak // nie sme v rohu, iba sme na zaciatku narazili na kolmu stenu
+      vpravo
+      vpravo
+      rohy // vtedy sa len natocime a pokracujeme
+      vlavo // pri vynarani inverzujeme otocenie
+    *ak
+  inak
+    ak nie je tehla tak // nie sme v rohu ani pri stene, cize kracame popri kraji
+      krok
+      rohy
+      dozadu // pri vynarani sa vraciame po prejdenej ceste
+    *ak
+  *ak
+*prikaz
+
+prikaz dozadu
+  vlavo
+  vlavo
+  krok
+  vlavo
+  vlavo
+*prikaz
+
+rohy

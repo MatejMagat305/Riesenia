@@ -1,0 +1,24 @@
+//priklad 01 sucet
+
+//funkcia ne presunutie kopy tehal zprava dolava
+prikaz premiestni
+       ak je tehla tak
+            zober
+            vlavo
+            poloz
+            vpravo
+            premiestni
+       *ak
+*prikaz
+
+//zlucenie 4 kop tehal do jednej
+//na konci zostane Karol stat pred kopou tehal
+prikaz sucet
+       opakuj 3 krat
+              vlavo
+              premiestni
+       *opakuj
+       vlavo
+*prikaz
+
+sucet

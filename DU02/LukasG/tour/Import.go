@@ -1,0 +1,3 @@
+package tour
+
+func HackImport()  {}

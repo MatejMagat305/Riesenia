@@ -1,0 +1,34 @@
+{princip programu je jednoduchy postupne
+ preklada tehlu po tehle z kazdej kopy
+ na jednu. }
+ Prikaz otoc
+         vlavo
+         vlavo
+  *Prikaz
+
+  Prikaz sucet
+         vlavo
+         kym je tehla  rob
+         zober
+         vpravo
+         poloz
+         vlavo
+         *kym
+         vlavo
+         kym je tehla  rob
+         zober
+         otoc
+         poloz
+         otoc
+         *kym
+          vlavo
+         kym je tehla rob
+         zober
+         vlavo
+         poloz
+         vpravo
+         *kym
+         vlavo
+  *Prikaz
+  
+  sucet

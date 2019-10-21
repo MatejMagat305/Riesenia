@@ -1,0 +1,52 @@
+//priklad 04  rozkovy
+prikaz otocenie
+       //otocenie o 180 stupnov
+       vlavo
+       vlavo
+*prikaz
+
+prikaz poStenu
+       //pohyb k stene pred karlom
+       ak nie je stena tak
+            krok
+            poStenu
+            otocenie
+            krok
+            otocenie
+       inak
+           vlavo
+           polozTehlu
+           vpravo
+       *ak
+*prikaz
+
+prikaz polozTehlu
+       //umiestenie tehly do rohu
+       ak nie je stena tak
+            krok
+            polozTehlu
+            otocenie
+            krok
+            otocenie
+       inak
+           otocenie
+           krok
+           otocenie
+           poloz
+           krok
+       *ak
+*prikaz
+
+
+//Karol sa pohybuje 4x vo forme pismena L,
+//ide po stenu pred nim, ked pride k stene otoci sa vlavo,
+//znovu sa rozbehne k najblizsej stene, ked nej dorazi bude
+//stat v rohu, polozi tehlu a vrati sa na vychodziu poziciu
+prikaz doRohov
+       opakuj 4 krat
+              poStenu
+              vlavo
+       *opakuj
+*prikaz
+
+doRohov

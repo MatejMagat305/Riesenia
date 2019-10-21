@@ -1,0 +1,70 @@
+{prikaz run zacne a karel ide akoby po diagonale
+teda vzdy krok vpravo a krok dole kym narazi
+na stenu potom si overi na aku vlastne narazil
+alebo ci tam nie su obe a podla toho
+zavola funkciu na navrat}
+
+prikaz navrat_sirka
+       kym nie je stena rob
+       krok
+       *kym
+       vlavo
+       kym nie je stena rob
+       krok
+       *kym
+       vpravo
+       vpravo
+*prikaz
+
+prikaz navrat_vyska
+       kym nie je stena rob
+       krok
+       *kym
+       vlavo
+       kym nie je stena rob
+       krok
+       *kym
+      vlavo
+*prikaz
+
+prikaz navrat_rovnake
+       kym nie je stena rob
+       krok
+       *kym
+       vlavo
+       kym nie je stena rob
+       krok
+       *kym
+*prikaz
+prikaz run
+       ak nie je stena tak
+       vlavo
+            ak nie je stena tak
+            krok
+            vpravo
+            krok
+            run
+            inak
+            vpravo
+            *ak
+       *ak
+*prikaz
+prikaz porovnavac
+      run
+      ak nie je stena tak
+      vlavo
+      vlavo
+      navrat_vyska
+      inak
+      vlavo
+           ak je stena tak
+           vlavo
+           navrat_rovnake
+           inak
+           vlavo
+           navrat_sirka
+           *ak
+      *ak
+*prikaz
+
+porovnavac

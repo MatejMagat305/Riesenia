@@ -1,0 +1,118 @@
+//priklad 03  porovnavac
+prikaz otocenie
+       //otocenie o 180 stupnov
+       vlavo
+       vlavo
+*prikaz
+
+prikaz oko
+       //krok vzad
+       otocenie
+       krok
+       otocenie
+*prikaz
+
+prikaz polozTehly
+       //naukladanie tehal do jedneho riadku/stlpca
+       ak nie je stena tak
+          poloz
+          krok
+          polozTehly
+          oko
+       *ak
+*prikaz
+
+prikaz porovnajRady
+       //tehly sa pridavaju/odoberaju do rohu miestnosti
+       ak nie je stena tak
+          ak nie je tehla tak
+             krok
+             porovnajRady
+             oko
+          inak
+              zober
+              otocenie
+              kym nie je stena rob
+                  krok
+              *kym
+              ak je znacka tak
+                 oko
+                 zober
+              inak
+                  oko
+                  poloz
+              *ak
+              krok
+              otocenie
+              porovnajRady
+          *ak
+       *ak
+*prikaz
+
+prikaz naukladaj
+       //polozenie tehal - rad, stlpec
+       polozTehly
+       vpravo
+       ak je stena tak
+          otocenie
+       *ak
+       polozTehly
+       vlavo
+       ak je stena tak
+          otocenie
+       *ak
+*prikaz
+
+prikaz porovnaj
+       //porovnanie - rad, stlpec
+       // -> porovna sa sirka miestnosti s dlzkou
+       porovnajRady
+       vpravo
+       ak je stena tak otocenie *ak
+       oznac    //znacka - tehly pridavat, inak odoberat
+       porovnajRady
+       odznac
+       //
+       //natocim Karla podla poctu tehal ktore zostali
+       //0 - aktualna strana dlhsia
+       //1 - rovnake
+       //1+ - predosla strana je dlhsia
+       krok
+       otocenie
+       ak je tehla tak
+          zober
+          ak je tehla tak
+             kym je tehla rob zober *kym
+             krok
+             vpravo
+             ak je stena tak
+                otocenie
+             *ak
+          inak
+              //jedna tehla -> rovnake
+             krok
+             kym nie je stena rob vlavo *kym
+          *ak
+       inak
+           //ziadna tehla -> dlhsi rozmer
+           krok
+           otocenie
+       *ak
+
+*prikaz
+
+prikaz porovnajDlzku
+       //ak je na zaciatku otoceny k stene
+       kym je stena rob vlavo *kym
+       //do rohu dam jednu tehlu ak zostane -> rovnake
+       krok
+       otocenie
+       poloz
+       krok
+       otocenie
+       //
+       naukladaj
+       porovnaj
+*prikaz
+
+porovnajDlzku

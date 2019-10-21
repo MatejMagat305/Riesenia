@@ -1,0 +1,50 @@
+prikaz porovnaj
+   zmeraj // zmeraj dlzku
+   vlavo
+   zmeraj // zmeraj sirku
+   zisti // zisti, ktora bola vacsia
+*prikaz
+
+prikaz zisti // rozlisi 3 rozne pripady stavu tehiel...
+   ak je tehla tak
+      zober
+      vpravo
+      ak je tehla tak // na oboch su este tehly
+        zober
+        vlavo
+        zisti
+      inak // po dlzke uz nie je, takze sirka je vacsia
+        vlavo // natoc sa po sirke
+        kym je tehla rob // vycisti tie co ostali
+          zober
+        *kym
+      *ak
+   inak // po sirke uz nebola tehla
+     vpravo // natoc sa po dlzke
+     ak je tehla tak // po dlzke ale este su tehly, takze je vacsia
+       kym je tehla rob // vycisti
+         zober
+       *kym
+     inak // tehly naraz nie su uz ani na jednej, takze sa rovnaju
+       vpravo
+     *ak
+   *ak
+*prikaz
+
+prikaz zmeraj // zmera aktualnu suradnicu naukladanim tehiel na zaciatok
+   ak nie je stena tak
+     krok
+     zmeraj
+     poloz
+   inak
+     vlavo
+     vlavo
+     kym nie je stena rob
+       krok
+     *kym
+     vlavo
+     vlavo
+   *ak
+*prikaz
+
+porovnaj // rozmer: vyska >= max(sirka, dlzka), inak to nebude fungovat!

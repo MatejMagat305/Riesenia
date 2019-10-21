@@ -1,0 +1,68 @@
+//priklad 02 maximum
+
+prikaz obrat
+       //otocenie o 180 stupnov
+       vlavo
+       vlavo
+*prikaz
+
+prikaz oDva
+       //posun o dva kroky dopredu
+       opakuj 2 krat krok *opakuj
+*prikaz
+
+prikaz doprava
+       //posun na policko od Karola po pravej ruke
+       vpravo
+       krok
+       vlavo
+*prikaz
+
+prikaz skopiruj
+       //skopirovanie 1. stlpcu tehal o dva doprava
+       ak je tehla tak
+          vpravo
+          oDva
+          vlavo
+          poloz
+          vlavo
+          oDva
+          vpravo
+          krok
+          skopiruj
+          obrat
+          krok
+          obrat
+       *ak
+*prikaz
+
+prikaz skopiruj2
+       //skopirovanie 2. stlpcu tehal o jeden doprava
+       //s tym ze ak tam uz tehla je tak nepridam
+       //v tretom stlpci mi zostane maximum
+       ak je tehla tak
+          vpravo
+          krok
+          vlavo
+          ak nie je tehla tak
+             poloz
+          *ak
+          vlavo
+          krok
+          vpravo
+          krok
+          skopiruj2
+          obrat
+          krok
+          obrat
+      *ak
+*prikaz
+
+prikaz maximum
+     skopiruj
+     doprava
+     skopiruj2
+     doprava
+*prikaz
+
+maximum

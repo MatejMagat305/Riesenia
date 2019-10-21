@@ -1,0 +1,293 @@
+prikaz celomvzad
+       vlavo
+       vlavo
+*prikaz
+
+prikaz krok_do_zadu
+rychlo
+       celomvzad
+       krok
+       celomvzad
+pomaly
+*prikaz
+
+
+
+
+{1.}
+prikaz zober_moj
+ak je tehla tak
+zober
+zober_moj
+poloz
+ inak
+ vlavo
+  ak je tehla tak
+zober_moj
+*ak
+
+*ak
+*prikaz
+
+{zober_moj}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{2.}
+prikaz kopiruj_prvy
+  kym je tehla rob
+      krok
+      vpravo
+      poloz
+      vlavo
+  *kym
+*prikaz
+
+prikaz kopiruj_druhy
+  kym je tehla rob
+      celomvzad
+      poloz
+      vlavo
+      krok
+      vlavo
+  *kym
+*prikaz
+
+prikaz chod_naspravne_miesto_zprv
+  kym je tehla rob
+      krok
+  *kym
+  krok
+  vlavo
+  krok
+*prikaz
+
+prikaz chod_naspravne_miestozdruh
+vlavo
+krok
+vpravo
+chod_naspravne_miesto_zprv
+vlavo
+*prikaz
+
+prikaz chod_naspravne_miesto
+  krok
+  vlavo
+  ak je tehla tak
+     chod_naspravne_miesto_zprv
+     krok
+     vlavo
+     inak
+     chod_naspravne_miestozdruh
+  *ak
+  
+*prikaz
+
+prikaz porovnaj
+vpravo
+krok
+vlavo
+kopiruj_prvy
+krok
+vlavo
+kopiruj_druhy
+chod_naspravne_miesto
+*prikaz
+{porovnaj}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{3.}
+prikaz porovnaj_teny_prvu
+     ak je stena tak
+     vlavo
+     ak je stena tak
+     celomvzad
+     {oznac}
+     *ak
+     inak
+     krok
+     vlavo
+       porovnaj_teny_druhu
+     *ak
+
+*prikaz
+
+prikaz porovnaj_teny_druhu
+     ak je stena tak
+      vpravo
+     inak
+     krok
+     vpravo
+       porovnaj_teny_prvu
+     *ak
+
+*prikaz
+
+prikaz navrat_hlavou_ku_stenan
+     kym nie je stena rob
+     krok
+     *kym
+     vpravo
+     kym nie je stena  rob
+     krok
+     *kym
+     vlavo
+*prikaz
+
+prikaz chod_k_stene
+kym nie je stena rob
+krok
+*kym
+
+*prikaz
+
+
+
+
+
+
+prikaz vrat_sa_do_rohu
+          ak je zapad tak
+          navrat_hlavou_ku_stenan
+          inak
+            celomvzad
+            chod_k_stene
+            celomvzad
+            ak je juh tak
+            vpravo
+            chod_k_stene
+            vlavo
+            *ak
+            ak je vychod tak
+            vlavo
+            chod_k_stene
+            vpravo
+            *ak
+              *ak
+*prikaz
+
+
+prikaz porovnaj_teny       {je otoceny dole}
+       porovnaj_teny_prvu
+       vrat_sa_do_rohu
+*prikaz
+
+{porovnaj_teny}
+
+
+
+
+
+
+
+
+{4.}      {pre prípad chyby v jednom, alebo viacerych}
+
+prikaz poloz_alebo_nie
+ak je roh tak
+  krok_do_zadu
+  poloz
+  krok
+ *ak
+*prikaz
+podmienka roh
+     nepravda
+     vlavo
+     ak je stena tak
+      pravda
+      inak
+      celomvzad
+     ak je stena tak
+           pravda
+      *ak
+       celomvzad
+     *ak
+     vpravo
+*podmienka
+
+podmienka je_volno
+rychlo
+ nepravda
+ ak nie je stena tak
+    ak nie je tehla  tak
+    pravda
+   *ak
+*ak
+pomaly
+*podmienka
+
+prikaz orozkuj
+ak je je_volno tak
+    krok
+    orozkuj
+    krok_do_zadu
+    inak
+    ak je stena tak
+     poloz_alebo_nie
+     vlavo
+     ak je stena tak
+     vlavo
+      orozkuj
+      celomvzad
+     inak
+     orozkuj
+     vpravo
+
+     *ak
+*ak
+*ak
+*prikaz
+
+
+orozkuj
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,41 @@
+prikaz maximum1
+  ak je tehla tak // pride na koniec prvej rady
+     krok
+     maximum1
+     stavaj // pri vynarani staviame tehly od konca
+  inak // ak uz prva rada skoncila, prejde na druhu
+     vpravo
+     krok
+     vlavo
+     ak je tehla tak // ak je druha rada dlhsia, prejde na jej koniec
+       maximum2 // hack, ideme do druhej funkcie 
+     inak // prva bola dlhsia, cize sa uz len posunieme doprava a zacneme vynarat
+       vpravo
+       krok
+       vlavo
+     *ak
+  *ak
+*prikaz
+
+prikaz maximum2
+  ak je tehla tak // posuvame sa po druhej rade
+     krok
+     maximum2
+     stavaj // pri vynarani staviame tehly od konca
+  inak // v tejto funkcii vieme, ze sme uz na druhej rade, cize chceme uz len jeden posun
+     vpravo
+     krok
+     vlavo
+  *ak
+*prikaz
+
+prikaz stavaj
+  vlavo
+  vlavo
+  krok
+  vpravo
+  vpravo
+  poloz
+*prikaz
+
+maximum1 // Dve funkcie kvoli potrebe pamatat si, v ktorej sme rade kvoli posunom vpravo
