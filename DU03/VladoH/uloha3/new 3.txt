@@ -1,0 +1,13 @@
+1. 	koordinaty v mriezke, ktore su prave spracovavane (ak od prveho vypisaneho cisla odcitame druhe)
+	a nim prisluchajuca aktualna hodnota pascalovho trojuholnika
+2. 	pretoze cely prvy riadok sa nastavi na %par% (1, ) a cely prvy stlpec na %par% (, 1).
+	Takto vznikne v prvom elemente na pozicii [0, 0] prienik %par% (1, 1) a od neho sa dalej
+	odvijaju vsetky hodnoty v mriezke.
+	Prisluchajuca hodnota v paskalovom 3holniku daneho elementu je sucet hodnot v %par%e, teda napriklad
+	pre prvy element 2.
+	Zvysne elementy mriezky su zavisle od prveho pretoze su vsetky prechadzane v cykle
+	a kazdy jeden nastavi prvu alebo druhu cast %par%u elementu v nasledujucom
+	riadku a stlpci
+3. 	uchovava %par%y definovane v predchadzajucej odpovedi
+4. 	100
+5. 	pascalov trojuholnik zobrazeny v mriezke

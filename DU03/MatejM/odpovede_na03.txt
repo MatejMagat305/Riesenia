@@ -1,0 +1,11 @@
+1. tllačí ako prvé 10 - veľkosť poľa
+potom sa spustia (100)go routiny, ktoré vypíšu (každá) vypíše do riadku tri čísla, prvé je o 2 väčšie ako 
+súčet i a j agenta007, druhé je o 1 väčšie ako j a tretie je číslo, ktoré program zostavil z čísel, ktoré 
+mal agent007 uložené v prem. stlpec a riadok, čísla sa budú zvyšovať, ale podľa môjho názoru nie 
+deterministicky, pretože go rutini si konkurujú.....
+3. uchováva i,j, ktoré sú teraz nezaumavé, a má dva kanáli, ktoré buď čítajú, uchovávajú, alebo predávajú práve jeden integer
+4. toľko koľko je veľkosť NxN, v našom prípade 100
+5. pascalov trojuhulník, kombinačné čísla,, alebo bellové čísla(čísla pri rozklade množín...),
+pripomenulo mi to aj konkurenciu, ale tá asi nie je mat pojem....
+2. pretože sa agenty sčítavajú podobne ako čísla v pasc. troj., ale ovveľa zaujmavejšie,
+pretože, sa môžu preskočiť...     
