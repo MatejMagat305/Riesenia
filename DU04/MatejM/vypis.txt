@@ -1,0 +1,31 @@
+GOROOT=C:\Go #gosetup
+GOPATH=C:\Users\matej\go #gosetup
+C:\Go\bin\go.exe build -o C:\Users\matej\AppData\Local\Temp\___go_build_awesomeProject4.exe awesomeProject4 #gosetup
+C:\Users\matej\AppData\Local\Temp\___go_build_awesomeProject4.exe #gosetup
+Matica A:
+1 3 
+-2 1 
+
+Matica B:
+3 2 
+15 1 
+
+worker 1 pracuje
+worker 3 pracuje
+worker 2 pracuje
+prisiel vysledok {0 0 48}
+prisiel vysledok {1 0 9}
+prisiel vysledok {0 1 5}
+worker 3 pracuje
+0     0     48
+1     0     9
+0     1     5
+1     1     -3
+prisiel vysledok {1 1 -3}
+6.031273s
+Matica A*B:
+48 5 
+9 -3 
+
+
+Process finished with exit code 0
