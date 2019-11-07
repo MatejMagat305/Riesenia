@@ -1,0 +1,9 @@
+Program vizualizuje spravanie sa vecarajucich filozofov.
+Kazdy filozof ma svoje cislo, ktore vidno aj v tabulke a 
+ma tri stavy: ROZMYSLA, HLADNY, JE (EAT)
+Obrazky znazornuju v akom je stave a tabulka nam hovori,
+kolkorat sa v ktorom stave nachadzal.
+Po ukonceni behu programu sa vypise "koniec", cas na beh
+programu je nastaveny na 30 sekund. 
+Po uplynuti casu vidime,
+kolkokrat sa ktory filozof v ktorom stave nachadzal.

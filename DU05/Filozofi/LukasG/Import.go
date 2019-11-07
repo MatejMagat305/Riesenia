@@ -1,0 +1,3 @@
+package philosophers
+
+func HackImport() {}

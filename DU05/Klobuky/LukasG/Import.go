@@ -1,0 +1,3 @@
+package hats
+
+func HackImport() {}
