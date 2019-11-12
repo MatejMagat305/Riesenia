@@ -1,0 +1,19 @@
+54b   -- 2.5 b za najkratsie riesenie vsetkych cias, odkedy premia existuje
+SimonB  -- tesime sa na vysvetlenie, v opacnom pripade chyba link na uvedenie zdroja :)
+
+import Control.Applicative
+cartSucin3 a=liftA3(,,)a
+
+62b
+import Data.List
+cartSucin3 a b c=nub[(x,y,z)|x<-a,y<-b,z<-c]
+DasaK  
+MatejM
+MichalH
+RomanK
+
+72b
+LukasG
+import Data.List
+
+cartSucin3 k l m=[(x,y,z)|z<-nub m,y<-nub l,x<-nub k]
