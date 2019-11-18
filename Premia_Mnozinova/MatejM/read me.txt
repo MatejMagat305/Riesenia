@@ -1,0 +1,8 @@
+výtazný kod je v "h.sh" - čísla sú vo screenshote, 
+spúštacia funkcia je vratNCislo :: ->Int->Integer,
+ "hh.sh" je nepoužiteľný pre väčšie ako 60..........., je to sepá odbočka..........,
+
+trvanie:
+1000 - 1 sec
+10 000 - 8 sec
+100 000 - cca 35 min(neviem presne, lebo som to nechal bežať a robil som niečo iné) 
